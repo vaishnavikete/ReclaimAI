@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white;
+  }
+}
+
+/* Custom Animations & Styles */
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.4); }
+  60% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.animate-breathe {
+  animation: breathe 10s infinite ease-in-out;
+}
